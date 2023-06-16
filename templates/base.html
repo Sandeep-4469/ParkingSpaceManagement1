@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Malls</title>
+  <style>
+    /* CSS styles for navigation bar */
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    ul.navbar li {
+      float: left;
+    }
+    
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    ul.navbar li a:hover {
+        background-color: #111;
+    }
+    
+    /* CSS styles for the body */
+    .mall-buttons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .mall-button {
+      display: inline-block;
+      padding: 10px;
+      margin: 10px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .video-container {
+      margin-top: 20px;
+      background-color: white;
+      margin-left: 500px;
+    }
+    
+    .video-container iframe {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+  <script>
+    function playVideo(videoUrl) {
+      var videoContainer = document.getElementById("videoContainer");
+      videoContainer.innerHTML = '<iframe src="' + videoUrl + '" frameborder="0" allowfullscreen></iframe>';
+    }
+  </script>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <ul class="navbar">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <!-- Body with shopping mall buttons and video container -->
+  <div class="mall-buttons">
+    <button class="mall-button" onclick="playVideo('/workspace/ParkingSpaceManagement/static/Video_1.mp4')">Shopping Mall 1</button>
+    <button class="mall-button" onclick="playVideo('video_url_2')">Shopping Mall 2</button>
+    <button class="mall-button" onclick="playVideo('video_url_3')">Shopping Mall 3</button>
+  </div>
+  
+  <div class="video-container" id="videoContainer"></div>
+</body>
+</html>
